@@ -1,0 +1,33 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 19/03/2025
+Ejercicio: Ejercicio 4
+-->
+<!-- Version -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Contenedor de empleados -->
+<Empleados>
+	<!-- Cada empleado con su descripcion en forma de eiquetas hijas -->
+	<Empleado>
+		<Nombre>Ana</Nombre>
+		<Apellido>Garcia</Apellido>
+		<Edad>30</Edad>
+		<Departamento>Ventas</Departamento>
+		<Cargo>Ejecutivo de ventas</Cargo>
+	</Empleado>
+	<Empleado>
+		<Nombre>Luis</Nombre>
+		<Apellido>Rodriguez</Apellido>
+		<Edad>45</Edad>
+		<Departamento>Finanzas</Departamento>
+		<Cargo>Analista Financiero</Cargo>
+	</Empleado>
+	<Empleado>
+		<Nombre>María</Nombre>
+		<Apellido>López</Apellido>
+		<Edad>28</Edad>
+		<Departamento>Marketing</Departamento>
+		<Cargo>Especialita en redes sociales</Cargo>
+	</Empleado>
+</Empleados>

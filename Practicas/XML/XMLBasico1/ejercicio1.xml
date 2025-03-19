@@ -1,0 +1,25 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 19/03/2025
+Ejercicio: Ejercicio 1
+-->
+
+<!-- Version -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Contenedor de las ciudades -->
+<Ciudades>
+	<Ciudad>
+	<!-- Nombre y localizacion -->
+		<Nombre>Nueva Delhi</Nombre>
+		<Pais continente="Ásia">India</Pais>
+	</Ciudad>
+	<Ciudad >
+		<Nombre>Lisboa</Nombre>
+		<Pais continente="Europa">Portugal</Pais>
+	</Ciudad>
+	<Ciudad >
+		<Nombre>El Cairo</Nombre>
+		<Pais continente="Africa">Egipto</Pais>
+	</Ciudad>
+</Ciudades>

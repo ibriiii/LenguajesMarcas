@@ -1,0 +1,15 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 19/03/2025
+Ejercicio: Ejercicio 3
+-->
+<!-- Version -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Contenedor de libros -->
+<Libros>
+	<!-- Los libros con su descripcion en forma de atributos -->
+	<Libro titulo="Con Amor Simon" autor="Becky Albertally" añoPublicacion="2015"></Libro>
+	<Libro titulo="Alas de Sangre" autor="Rebecca Yarros" añoPublicacion="2023"></Libro>
+	<Libro titulo="El niño que perdió la guerra" autor="Julia Navarro" añoPublicacion="2024"></Libro>
+</Libros>

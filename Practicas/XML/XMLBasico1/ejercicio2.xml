@@ -1,0 +1,34 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 19/03/2025
+Ejercicio: Ejercicio 2
+-->
+<!-- Version -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Contenedor de Hechos -->
+<HechosHistóricos>
+	<!-- Cada Hecho con una descripcion como atributo -->
+	<Hecho descripcion="IBM da a conocer el PC.">
+		<!-- La respectiva fecha del suceso -->
+		<Fecha>
+			<Dia>12</Dia>
+			<Mes>8</Mes>
+			<Año>1981</Año>
+		</Fecha>
+	</Hecho>
+	<Hecho descripcion="Se funda Google">
+		<Fecha>
+			<Dia>4</Dia>
+			<Mes>9</Mes>
+			<Año>1998</Año>
+		</Fecha>
+	</Hecho>
+	<Hecho descripcion="IBM da a conocer el PC.">
+		<Fecha>
+			<Dia>4</Dia>
+			<Mes>2</Mes>
+			<Año>2004</Año>
+		</Fecha>
+	</Hecho>
+</HechosHistóricos>
