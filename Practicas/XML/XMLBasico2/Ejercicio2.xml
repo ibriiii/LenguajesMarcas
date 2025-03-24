@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 24/03/2025
+Ejercicio: Ejercicio 2
+-->
+<!-- Contenedor de equipos -->
+<equiposFutbol>
+	<!-- Contenedor de equipo individual -->
+    <equipo>
+		<!-- Nombre del equipo -->
+        <nombre>Real Madrid CF</nombre>
+		<!-- Ciudad del equipo -->
+        <ciudad>Madrid</ciudad>
+		<!-- El entrenador, sin nombre -->
+        <entrenador></entrenador>
+		<!-- Contendor de jugadores -->
+        <jugadores>
+			<!-- Jugador individual con la posicion como atributo -->
+            <jugador posicion="delantero">
+				<!-- Nombre del jugador -->
+                <nombre>Vinicius Junior</nombre>
+				<!-- Nacionalidad del jugador -->
+                <nacionalidad>Brasileña</nacionalidad>
+            </jugador>
+            <jugador posicion="medio">
+                <nombre>Jude Bellingham</nombre>
+                <nacionalidad>Inglesa</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+    <equipo>
+        <nombre>FC Barcelona</nombre>
+        <ciudad>Barcelona</ciudad>
+        <entrenador></entrenador>
+        <jugadores>
+            <jugador posicion="delantero">
+                <nombre>Robert Lewandowski</nombre>
+                <nacionalidad>Polaca</nacionalidad>
+            </jugador>
+            <jugador posicion="defensa">
+                <nombre>Ronald Araújo</nombre>
+                <nacionalidad>Uruguaya</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+</equiposFutbol>

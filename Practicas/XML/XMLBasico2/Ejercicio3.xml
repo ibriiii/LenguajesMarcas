@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 24/03/2025
+Ejercicio: Ejercicio 3
+-->
+<!-- Contenedor principal de recetas -->
+<recetas>
+    <!-- Receta individual con identificador único -->
+    <receta id="rc001">
+        <!-- Nombre de la receta -->
+        <nombre>Sopa de cebolla</nombre>
+        <!-- Número de comensales para la receta -->
+        <comensales>4</comensales>
+        
+        <!-- Contenedor de todos los ingredientes -->
+        <ingredientes>
+            <!-- Ingrediente individual con sus propiedades -->
+            <ingrediente>
+                <nombre>cebollas</nombre>
+                <cantidad>1</cantidad>
+                <unidad>kg</unidad>
+            </ingrediente>
+            
+            <ingrediente>
+                <nombre>caldo de carne</nombre>
+                <cantidad>2</cantidad>
+                <unidad>litros</unidad>
+            </ingrediente>
+            
+            <ingrediente>
+                <nombre>mantequilla</nombre>
+                <cantidad>100</cantidad>
+                <unidad>gr</unidad>
+            </ingrediente>
+            
+            <ingrediente>
+                <nombre>harina</nombre>
+                <cantidad>1</cantidad>
+                <unidad>cucharada</unidad>
+            </ingrediente>
+            
+            <ingrediente>
+                <nombre>queso emmental</nombre>
+                <cantidad>100</cantidad>
+                <unidad>gr</unidad>
+            </ingrediente>
+            
+            <!-- Ingrediente con cantidad variable -->
+            <ingrediente>
+                <nombre>pan tostado</nombre>
+                <cantidad></cantidad>
+                <unidad>rebanadas</unidad>
+                <observacion>cantidad al gusto</observacion>
+            </ingrediente>
+            
+            <!-- Ingrediente sin cantidad específica -->
+            <ingrediente>
+                <nombre>tomillo</nombre>
+                <cantidad></cantidad>
+                <unidad></unidad>
+            </ingrediente>
+            
+            <ingrediente>
+                <nombre>hoja de laurel</nombre>
+                <cantidad>1</cantidad>
+                <unidad>hoja</unidad>
+            </ingrediente>
+            
+            <ingrediente>
+                <nombre>pimienta</nombre>
+                <cantidad></cantidad>
+                <unidad></unidad>
+            </ingrediente>
+        </ingredientes>
+        
+        <!-- Contenedor del proceso de preparación -->
+        <proceso>
+            <!-- Paso individual del proceso con orden numérico -->
+            <paso orden="1">Pelar y partir las cebollas en rodajas finas.</paso>
+            <paso orden="2">Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que estén transparentes sin dorarse.</paso>
+            <paso orden="3">Añadir la harina sin dejar de remover.</paso>
+            <paso orden="4">Ponerlo en una cazuela con el caldo, el tomillo y el laurel.</paso>
+            <paso orden="5">Dejar cocer a fuego lento durante unos 15 minutos.</paso>
+            <paso orden="6">Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno.</paso>
+        </proceso>
+    </receta>
+</recetas>

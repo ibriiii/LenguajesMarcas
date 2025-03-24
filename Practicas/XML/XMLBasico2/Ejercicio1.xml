@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 24/03/2025
+Ejercicio: Ejercicio 1
+-->
+<!-- Contenedor de Paginas web -->
+<PaginasWeb>
+	<!-- Contenedor individual que contiene la informacion en forma de etiquetas de cada pagina -->
+	<Pagina>
+		<!-- Nombre de la pagina -->
+		<nombre>W3Schools</nombre>
+		<!-- Breve descripción -->
+		<Descripcion>Tutoriales de informatica.</Descripcion>
+		<!-- URL que te lleva a la pagina indicada -->
+		<URL>https://www.w3schools.com/</URL>
+	</Pagina>
+	<Pagina>
+		<nombre>Wikipedia</nombre>
+		<Descripcion>La enciclopedia libre.</Descripcion>
+		<URL>http://www.wikipedia.org/</URL>
+	</Pagina>
+	<Pagina>
+		<nombre>W3C</nombre>
+		<Descripcion>World Wide Web Consortium.</Descripcion>
+		<URL>http://www.w3.org/</URL>
+	</Pagina>
+</PaginasWeb>
