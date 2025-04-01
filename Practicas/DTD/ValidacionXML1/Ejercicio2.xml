@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 31/03/2025
+Ejercicio: Ejercicio 2
+-->
+<!DOCTYPE liga SYSTEM "liga_baloncesto.dtd">[
+	<!ELEMENT liga (jugador+)>
+	<!ELEMENT jugador (nombre, apellidos, equipo, edad)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT apellidos (#PCDATA)>
+	<!ELEMENT equipo (ciudad, presidente)>
+	<!ELEMENT ciudad (#PCDATA)>
+	<!ELEMENT presidente (nombrePresidente, apellidosPresidente)>
+	<!ELEMENT nombrePresidente (#PCDATA)>
+	<!ELEMENT apellidosPresidente (#PCDATA)>
+	<!ELEMENT edad (#PCDATA)>
+]
+<!-- Contenedor de jugadores -->
+<liga>
+	<!-- Jugador 1: NBA -->
+	<jugador>
+		<!-- Descripcion del jugador -->
+		<nombre>LeBron</nombre>
+		<apellidos>James</apellidos>
+		<!-- Descripcion del equipo -->
+		<equipo>
+			<ciudad>Los Ángeles</ciudad>
+			<!-- Descripcion del presidente -->
+			<presidente>
+				<nombrePresidente>Jeanie</nombrePresidente>
+				<apellidosPresidente>Buss</apellidosPresidente>
+			</presidente>
+		</equipo>
+		<edad>38</edad>
+	</jugador>
+
+	<!-- Jugador 2: ACB -->
+	<jugador>
+		<nombre>Nikola</nombre>
+		<apellidos>Mirotic</apellidos>
+		<equipo>
+			<ciudad>Barcelona</ciudad>
+			<presidente>
+				<nombrePresidente>Josep</nombrePresidente>
+				<apellidosPresidente>Maria Bartomeu</apellidosPresidente>
+			</presidente>
+		</equipo>
+		<edad>32</edad>
+	</jugador>
+
+	<!-- Jugador 3: Euroliga -->
+	<jugador>
+		<nombre>Walter</nombre>
+		<apellidos>Tavares</apellidos>
+		<equipo>
+			<ciudad>Madrid</ciudad>
+			<presidente>
+				<nombrePresidente>Florentino</nombrePresidente>
+				<apellidosPresidente>Pérez</apellidosPresidente>
+			</presidente>
+		</equipo>
+		<edad>31</edad>
+	</jugador>
+</liga>

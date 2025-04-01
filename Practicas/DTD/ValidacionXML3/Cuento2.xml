@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 01/03/2025
+Ejercicio: Ejercicio1
+-->
+<!DOCTYPE cuento [
+	<!ELEMENT cuento (personajes+, trama, etiqueta*)>
+	<!ATTLIST cuento
+		cod CDATA #REQUIRED
+		titulo CDATA #REQUIRED
+		genero (infantil|fantasía|terror) #IMPLIED>
+
+	<!ELEMENT personajes (persona+)>
+	<!ELEMENT persona (nombre, genero, descripcion?, (descripcion_fisica|imagen|url)?)>
+	<!ATTLIST persona
+		id ID #REQUIRED
+		tipo (principal|secundario|antagonista) "principal">
+
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT genero (#PCDATA)>
+	<!ELEMENT descripcion (#PCDATA)>
+	<!ELEMENT descripcion_fisica (#PCDATA)>
+	<!ELEMENT imagen (#PCDATA)>
+	<!ELEMENT url (#PCDATA)>
+
+	<!ELEMENT trama (#PCDATA)>
+	<!ELEMENT etiqueta EMPTY>
+	<!ATTLIST etiqueta nombre CDATA #REQUIRED>
+
+	<!ELEMENT precio (#PCDATA)>
+	<!ATTLIST precio moneda CDATA "eur">
+]>
+<cuento cod="T02" titulo="Drácula" genero="terror">
+	<personajes>
+		<persona id="d1" tipo="principal">
+			<nombre>Conde Drácula</nombre>
+			<genero>M</genero>
+			<descripcion>Vampiro de Transilvania</descripcion>
+		</persona>
+		<persona id="d2" tipo="secundario">
+			<nombre>Mina Harker</nombre>
+			<genero>F</genero>
+		</persona>
+	</personajes>
+	<trama>Un vampiro viaja a Inglaterra y siembra el terror.</trama>
+	<etiqueta nombre="vampiros" />
+	<etiqueta nombre="clásico" />
+</cuento>

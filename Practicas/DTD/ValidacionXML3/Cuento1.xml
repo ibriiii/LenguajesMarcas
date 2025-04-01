@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 01/03/2025
+Ejercicio: Ejercicio1
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE cuento [
+	<!ELEMENT cuento (personajes, trama, etiqueta*)>
+	<!ATTLIST cuento
+		cod CDATA #REQUIRED
+		titulo CDATA #REQUIRED
+		genero (infantil|fantasía|terror) #IMPLIED>
+
+	<!ELEMENT personajes (persona+)>
+	<!ELEMENT persona (nombre, genero, descripcion?, (descripcion_fisica|imagen|url)?)>
+	<!ATTLIST persona
+		id ID #REQUIRED
+		tipo (principal|secundario|antagonista) "principal">
+
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT genero (#PCDATA)>
+	<!ELEMENT descripcion (#PCDATA)>
+	<!ELEMENT descripcion_fisica (#PCDATA)>
+	<!ELEMENT imagen (#PCDATA)>
+	<!ELEMENT url (#PCDATA)>
+
+	<!ELEMENT trama (#PCDATA)>
+	<!ELEMENT etiqueta EMPTY>
+	<!ATTLIST etiqueta nombre CDATA #REQUIRED>
+]>
+<!-- Contenedor de cuento con atributos del cuento -->
+<cuento cod="A01" titulo="Caperucita Roja" genero="infantil">
+	<!-- Contenedor de personajes -->
+	<personajes>
+		<!-- Personaje -->
+		<persona id="p1" tipo="principal">
+			<!-- Descripcion del personaje -->
+			<nombre>Caperucita</nombre>
+			<genero>F</genero>
+			<descripcion>Niña que lleva caperuza roja</descripcion>
+			<descripcion_fisica>Pelo rubio, capa roja, cesta de mimbre</descripcion_fisica>
+		</persona>
+	</personajes>
+	<!-- La trama del cuento -->
+	<trama>Una niña visita a su abuela y es engañada por un lobo.</trama>
+	<!-- Eiquetas que identifican el genero del cuento -->
+	<etiqueta nombre="clásico" />
+	<etiqueta nombre="niños" />
+</cuento>

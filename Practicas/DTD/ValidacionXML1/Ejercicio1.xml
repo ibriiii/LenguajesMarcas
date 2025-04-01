@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 31/03/2025
+Ejercicio: Ejercicio 1
+-->
+<!DOCTYPE biblioteca [
+	<!ELEMENT biblioteca (libro+)>
+	<!ELEMENT libro (titulo, editorial, autor, paginas)>
+	<!ELEMENT titulo (#PCDATA)>
+	<!ELEMENT editorial (#PCDATA)>
+	<!ELEMENT autor (nombre, apellidos)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT apellidos (#PCDATA)>
+	<!ELEMENT paginas (#PCDATA)>
+]>
+<!-- Contenedor de libros -->
+<biblioteca>
+	<!-- Libro 1: Clásico de literatura -->
+	<libro>
+		<!-- Descripcion del libro -->
+		<titulo>Don Quijote de la Mancha</titulo>
+		<editorial>Francisco de Robles</editorial>
+		<!-- Descripcion del autor -->
+		<autor>
+			<nombre>Miguel</nombre>
+			<apellidos>de Cervantes</apellidos>
+		</autor>
+		<paginas>863</paginas>
+	</libro>
+
+<!-- Libro 2: Novela contemporánea -->
+	<libro>
+		<titulo>La sombra del viento</titulo>
+		<editorial>Planeta</editorial>
+		<autor>
+			<nombre>Carlos Ruiz</nombre>
+			<apellidos>Zafón</apellidos>
+		</autor>
+		<paginas>487</paginas>
+	</libro>
+
+	<!-- Libro 3: Ciencia ficción -->
+	<libro>
+		<titulo>Fahrenheit 451</titulo>
+		<editorial>Ballantine Books</editorial>
+		<autor>
+			<nombre>Ray</nombre>
+			<apellidos>Bradbury</apellidos>
+		</autor>
+		<paginas>256</paginas>
+	</libro>
+</biblioteca>

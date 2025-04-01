@@ -1,0 +1,46 @@
+XML Basico 1:
+
+Ejercicio 1
+
+Crear un XML básico con elementos y atributos.
+Usar atributos para datos fijos (ej: continente).
+Jerarquía: ciudad → país → continente (como atributo).
+
+Ejercicio 2
+
+Estructurar fechas en día/mes/año como elementos.
+Usar atributos para texto descriptivo (ej: descripción del hecho).
+
+Ejercicio 3
+
+Definir atributos clave (título, autor, año).
+Listar elementos similares (libros) con misma estructura.
+
+Ejercicio 4
+
+Convertir una tabla en estructura XML jerárquica.
+Organizar datos personales y laborales en elementos anidados.
+
+-----------------------------------------------------------------------------------
+
+XML Basico 2:
+
+Ejercicio 1
+
+Crear una lista de elementos (<marcador>) sin usar atributos.
+Estructurar datos web (nombre, descripción, URL) como elementos hijos.
+
+Ejercicio 2
+
+Usar atributos para datos fijos (posición del jugador).
+Anidar elementos (<jugador> dentro de <equipo>).
+
+Ejercicio 3
+
+Organizar ingredientes y pasos para búsquedas automatizadas.
+Usar elementos para cantidades (<cantidad> y <unidad>).
+
+Ejercicio 4
+
+Estructurar datos académicos (alumnos, módulos, evaluaciones).
+Manejar información opcional (faltas/notas desconocidas).

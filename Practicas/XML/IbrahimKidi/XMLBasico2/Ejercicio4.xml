@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 24/03/2025
+Ejercicio: Ejercicio 4
+-->
+<!-- Contenedor principal del ciclo -->
+<moduloCiclo tipo="DAW">
+    
+    <!-- Información general del módulo formativo -->
+    <modulo>
+        <nombre>Lenguajes de Marcas</nombre>
+        <horaSemanales>4</horaSemanales>
+        <caracter>obligatorio</caracter>
+        <fechaInicio>2023-09-15</fechaInicio>
+        <fechaFin>2024-06-22</fechaFin>
+    </modulo>
+    
+    <!-- Contenedor de todos los alumnos matriculados -->
+    <alumnos>
+        
+        <!-- Datos del primer alumno -->
+        <alumno dni="51623487V">
+            <nombreCompleto>Ana Fernández Gutiérrez</nombreCompleto>
+            <contacto>
+                <telefono>666544566</telefono>
+                <email>anafernandez@gmail.com</email>
+            </contacto>
+            <direccion>
+                <calle>C/ Amatista, 14</calle>
+                <codigoPostal>28905</codigoPostal>
+                <localidad>Getafe</localidad>
+                <provincia>Madrid</provincia>
+            </direccion>
+            <evaluacion>
+                <asistencia>
+                    <faltas desconocido="true"/>
+                </asistencia>
+                <nota desconocido="true"/>
+            </evaluacion>
+        </alumno>
+        
+        <!-- Datos del segundo alumno -->
+        <alumno dni="52369874B">
+            <nombreCompleto>Carlos López Sánchez</nombreCompleto>
+            <contacto>
+                <telefono>666455477</telefono>
+                <email>carloslopez@gmail.com</email>
+            </contacto>
+            <direccion>
+                <calle>C/ Ópalo, 15</calle>
+                <codigoPostal>28905</codigoPostal>
+                <localidad>Getafe</localidad>
+                <provincia>Madrid</provincia>
+            </direccion>
+            <evaluacion>
+                <asistencia>
+                    <faltas>0</faltas>
+                </asistencia>
+                <nota>apto</nota>
+            </evaluacion>
+        </alumno>
+    
+    </alumnos>
+
+</moduloCiclo>
