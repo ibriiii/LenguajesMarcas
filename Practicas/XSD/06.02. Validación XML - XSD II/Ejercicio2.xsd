@@ -1,0 +1,53 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 2
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- 
+        Definición del tipo para números de dos dígitos (00-19).
+        Se usará tanto para el atributo 'numero' como para el elemento 'codigo'
+    -->
+	<xs:simpleType name="tipoDosDigitos">
+		<xs:restriction base="xs:string">
+			<!-- Patrón que acepta desde 00 hasta 19 -->
+			<xs:pattern value="0[0-9]|1[0-9]" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- 
+        Definición del tipo para la letra (X, Y o Z).
+        Solo para el atributo 'letra' 
+    -->
+	<xs:simpleType name="tipoLetra">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="X" />
+			<xs:enumeration value="Y" />
+			<xs:enumeration value="Z" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Definición del elemento ficha -->
+	<xs:element name="fichas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ficha" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<!-- Elemento codigo con restricción de dos dígitos -->
+							<xs:element name="codigo" type="tipoDosDigitos" />
+							<!-- Elemento nombre sin restricciones especiales -->
+							<xs:element name="nombre" type="xs:string" />
+						</xs:sequence>
+						<!-- Atributo numero obligatorio -->
+						<xs:attribute name="numero" type="tipoDosDigitos" use="required" />
+						<!-- Atributo letra opcional con tipo específico -->
+						<xs:attribute name="letra" type="tipoLetra" use="optional" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio1-4 - Flores
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE flores [
+	<!ELEMENT flores (flor+)>
+	<!ELEMENT flor (#PCDATA)>
+]>
+<!-- Contenedor de flores -->
+<flores>
+	<!-- Flor individual -->
+	<flor>Rosa</flor>
+</flores>

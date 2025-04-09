@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 07/04/2025
+Ejercicio: 4-5 - Albumes
+-->
+<!-- Declaración DTD -->
+<!DOCTYPE albumsMortadelo [
+	<!ELEMENT albumsMortadelo (album*)>
+	<!ELEMENT album EMPTY>
+	<!ATTLIST album
+		nombre CDATA #REQUIRED
+		fecha (1969|1970|1971|1972|1973|1974) #REQUIRED>
+]>
+<!-- Contenedor de albumes -->
+<albumsMortadelo>
+	<!-- Album individual con atributos descriptivos -->
+	<album nombre="El sulfato atómico" fecha="1969" />
+	<album nombre="La caja de diez cerrojos" fecha="1971" />
+	<album nombre="El otro yo del profesor Bacterio" fecha="1973" />
+	<album nombre="Los cacharros majaretas" fecha="1974" />
+</albumsMortadelo>

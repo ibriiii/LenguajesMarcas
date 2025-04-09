@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 07/04/2025
+Ejercicio: 3-3 - Cuadros
+-->
+<!-- Declaración DTD -->
+<!DOCTYPE cuadros [
+	<!ELEMENT cuadros (cuadro*)>
+	<!ELEMENT cuadro EMPTY>
+	<!ATTLIST cuadro
+		titulo CDATA #REQUIRED
+		autor CDATA #REQUIRED
+    >
+]>
+<!-- Contenedor de cuadros -->
+<cuadros>
+	<!-- Cuadro individual con atributos describiendole -->
+	<cuadro titulo="Adán y Eva" autor="Alberto Durero" />
+	<cuadro autor="Lucas Cranach, el viejo" titulo="Adán y Eva" />
+</cuadros>

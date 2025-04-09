@@ -1,0 +1,21 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 1 - Clave con longitud fija, Solucion 1
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- FORMA 1: Combinando xs:length y xs:pattern -->
+	<xs:element name="clave">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<!-- Longitud exacta de 10 caracteres -->
+				<xs:length value="10" />
+				<!-- Permite letras (mayúsculas/minúsculas) y dígitos -->
+				<xs:pattern value="[a-zA-Z0-9]{10}" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,53 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 5 - FAQ
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Tipo para la versión (números.puntos.números) -->
+	<xs:simpleType name="tipoVersion">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d+(\.\d+)*" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Estructura del elemento q (pregunta-respuesta) -->
+	<xs:complexType name="tipoQ">
+		<xs:sequence>
+			<xs:element name="qtext" type="xs:string" />
+			<xs:element name="a" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Estructura del elemento part (contiene 1+ preguntas) -->
+	<xs:complexType name="tipoPart">
+		<xs:sequence>
+			<xs:element name="q" type="tipoQ" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Estructura del elemento info -->
+	<xs:complexType name="tipoInfo">
+		<xs:sequence>
+			<xs:element name="titulo" type="xs:string" />
+			<xs:element name="autor" type="xs:string" />
+			<xs:element name="email" type="xs:string" minOccurs="0" />
+			<xs:element name="version" type="tipoVersion" minOccurs="0" />
+			<xs:element name="fecha" type="xs:date" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Estructura raíz del FAQ -->
+	<xs:element name="faq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="info" type="tipoInfo" />
+				<xs:element name="part" type="tipoPart" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

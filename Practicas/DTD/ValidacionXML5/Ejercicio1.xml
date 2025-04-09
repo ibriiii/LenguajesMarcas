@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio2-1 - Marcadores
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE marcadores [
+	<!ELEMENT marcadores (marcador*)>
+	<!ELEMENT marcador (nombre, url)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT url (#PCDATA)>
+]>
+<!-- Contenedor de marcadores -->
+<marcadores>
+	<!-- Marcador individual -->
+	<marcador>
+		<!-- Descripcion del marcador -->
+		<nombre>W3C</nombre>
+		<url>http://www.w3.org/</url>
+	</marcador>
+	<marcador>
+		<nombre>Web Hypertext Application Technology Working Group (WHATWG)</nombre>
+		<url>http://www.whatwg.org/</url>
+	</marcador>
+</marcadores>

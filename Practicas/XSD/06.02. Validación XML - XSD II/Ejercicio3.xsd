@@ -1,0 +1,66 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 3 - Expresiones regulares XSD
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- 1. Capítulos del 0 al 9 (1 dígito) -->
+	<xs:simpleType name="capituloSimple">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Capítulo [0-9]" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- 2. Capítulos del 0 al 99 (1-2 dígitos) -->
+	<xs:simpleType name="capituloDoble">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Capítulo \d{1,2}" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- 3. Capítulos del 1 al 99 (sin 0) -->
+	<xs:simpleType name="capituloSinCero">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Capítulo [1-9][0-9]?" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- 4. Capítulos con 1+ dígitos -->
+	<xs:simpleType name="capituloExtendido">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Capítulo \d+" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- 5. Dos caracteres: 1º no número, 2º Z -->
+	<xs:simpleType name="caracterEspecial">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[^0-9]Z" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- 6. AB con 2+ B y C final -->
+	<xs:simpleType name="serieB">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="AB{2,}C" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- 7. R + 2+ S + número opcional 3-8 -->
+	<xs:simpleType name="combinacionRS">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="RS{2,}[3-8]?" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- 8. COD + 3 números + texto -->
+	<xs:simpleType name="codigoProducto">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="COD[0-9]{3}.+" />
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

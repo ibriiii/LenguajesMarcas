@@ -5,16 +5,15 @@ Curso: DAW1
 Fecha: 31/03/2025
 Ejercicio: Ejercicio 2 
 -->
-<!-- Declaracion DTD -->
+<!-- Declaracion del DTD -->
 <!DOCTYPE EquiposNBA [
-<!ELEMENT EquiposNBA (equipo|nombre)+>
-<!ELEMENT nombre (#PCDATA)>
-<!ELEMENT equipo (titulos, posicion, quimeto)>
-<!ATTLIST equipo
-	conferencia CDATA #REQUIRED>
-<!ELEMENT titulos (#PCDATA)>
-<!ELEMENT posicion (#PCDATA)>
-<!ELEMENT quimeto (#PCDATA)>
+	<!ELEMENT EquiposNBA (equipo|nombre)+>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT equipo (titulos, posicion, quimeto)>
+	<!ATTLIST equipo conferencia CDATA #REQUIRED>
+	<!ELEMENT titulos (#PCDATA)>
+	<!ELEMENT posicion (#PCDATA)>
+	<!ELEMENT quimeto (#PCDATA)>
 ]>
 <EquiposNBA>
 	<!-- Equipo con información completa -->
@@ -25,7 +24,7 @@ Ejercicio: Ejercicio 2
 		<posicion>7</posicion>
 		<quimeto>LeBron James, Anthony Davis, Russell Westbrook</quimeto>
 	</equipo>
-	
+
 	<!-- Equipo con información completa -->
 	<equipo conferencia="Este">
 		<nombre>Boston Celtics</nombre>
@@ -33,7 +32,7 @@ Ejercicio: Ejercicio 2
 		<posicion>1</posicion>
 		<quimeto>Jayson Tatum, Jaylen Brown, Marcus Smart</quimeto>
 	</equipo>
-	
+
 	<!-- Solo nombre del equipo -->
 	<nombre>Golden State Warriors</nombre>
 

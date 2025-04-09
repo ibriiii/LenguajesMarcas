@@ -1,0 +1,23 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 4 - Letras admitidas
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="letras">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<!-- 
+                    Patrón para 1+ pares de:
+                    - 1 letra mayúscula [A-Z]
+                    - seguida de 1 letra minúscula [a-z]
+                -->
+				<xs:pattern value="([A-Z][a-z])+" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+</xs:schema>

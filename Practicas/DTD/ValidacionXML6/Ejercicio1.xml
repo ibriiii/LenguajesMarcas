@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 07/04/2025
+Ejercicio: 3-1 - Datos personales
+-->
+<!-- Declaración DTD -->
+<!DOCTYPE persona [
+	<!ELEMENT persona EMPTY>
+	<!ATTLIST persona
+		nombre CDATA #IMPLIED
+		dni CDATA #REQUIRED>
+]>
+<!-- Persona con atributos -->
+<persona dni="03141592E" nombre="Juan Pérez" />

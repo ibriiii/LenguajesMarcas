@@ -1,0 +1,25 @@
+<?xmlversion="1.0" encoding="UTF-8"?>
+	<!DOCTYPE biblioteca [
+	<!ELEMENT biblioteca (libros, escritores)>
+	<!ELEMENT libros(libro)*>
+	<!ELEMENT libro(#PCDATA)>
+	<!ATTLIST libro codLib #REQUIRED>
+	<!ELEMENT escritores (escritor)*>
+	<!ELEMENT escritor (#PCDATA)>
+	<!ATTLIST escritor genero IDREFS #REQUIRED>
+]>
+
+<biblioteca>
+    <libros>
+        <libro codLib="L1">To Kill a Mockingbird</libro>
+        <libro codLib="L2">1984</libro>
+        <libro codLib="L3">Orgullo y Prejuicio</libro>
+        <libro codLib="L4">The Great Gatsby</libro>
+    </libros>
+    <escritores>
+        <escritor genero="L1">Harper Lee</escritor>
+        <escritor genero="L2">George Orwell</escritor>
+        <escritor genero="L3">Jane Austen</escritor>
+        <escritor genero="L4">F. Scott Fitzgerald</escritor>
+    </escritores>
+</biblioteca>

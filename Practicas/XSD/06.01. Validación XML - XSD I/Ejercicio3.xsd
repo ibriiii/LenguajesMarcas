@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 3
+-->
+
+<!-- Definición del esquema XML -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Definición del elemento raíz "precios" -->
+	<xs:element name="precios">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- El elemento "precio" puede aparecer varias veces -->
+				<xs:element name="precio" maxOccurs="unbounded">
+					<!-- 
+						"precio" es un número con un máximo de 3 dígitos en total y hasta 2 de esos dígitos pueden ser
+					decimales 
+					-->
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:totalDigits value="3" />
+							<xs:fractionDigits value="2" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

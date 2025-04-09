@@ -1,0 +1,53 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 3 - Heladería 1
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Tipo para la cantidad (0-1000 gramos) -->
+	<xs:simpleType name="tipoGramos">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0" />
+			<xs:maxInclusive value="1000" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Grupo para el primer sabor (chocolate O fresa) -->
+	<xs:group name="primerSabor">
+		<xs:choice>
+			<xs:element name="chocolate" type="tipoGramos" />
+			<xs:element name="fresa" type="tipoGramos" />
+		</xs:choice>
+	</xs:group>
+
+	<!-- Grupo para el segundo sabor (vainilla O turrón O nata) -->
+	<xs:group name="segundoSabor">
+		<xs:choice>
+			<xs:element name="vainilla" type="tipoGramos" />
+			<xs:element name="turron" type="tipoGramos" />
+			<xs:element name="nata" type="tipoGramos" />
+		</xs:choice>
+	</xs:group>
+
+	<!-- Estructura del helado -->
+	<xs:complexType name="tipoHelado">
+		<xs:sequence>
+			<xs:group ref="primerSabor" />
+			<xs:group ref="segundoSabor" />
+		</xs:sequence>
+		<xs:attribute name="fabricación" type="xs:date" use="required" />
+	</xs:complexType>
+
+	<!-- Elemento raíz -->
+	<xs:element name="heladeria">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="helado" type="tipoHelado" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

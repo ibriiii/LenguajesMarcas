@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio 2-4 - Vuelos
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE vuelos [
+	<!ELEMENT vuelos (vuelo+)>
+	<!ELEMENT vuelo (origen, destino)>
+	<!ELEMENT origen (#PCDATA)>
+	<!ELEMENT destino (#PCDATA)>
+]>
+<!-- Contenedor de vuelos -->
+<vuelos>
+	<!-- Vuelo individual -->
+	<vuelo>
+		<!-- Descripcion -->
+		<origen>Valencia (VLC)</origen>
+		<destino>Londres Heathrow (LHR)</destino>
+	</vuelo>
+	<vuelo>
+		<origen>Paris Charles de Gaulle (CDG)</origen>
+		<destino>Berlin Schönefeld (SFX)</destino>
+	</vuelo>
+</vuelos>

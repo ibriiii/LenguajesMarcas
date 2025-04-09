@@ -1,0 +1,20 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 1 - Clave con longitud fija, Solucion 2
+-->
+	<!-- FORMA 2: Solo con xs:pattern (regex más estricta) -->
+	<xs:element name="clave">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<!-- 
+                    ^ y $ aseguran que no haya caracteres adicionales.
+                    [a-zA-Z0-9]{10} permite exactamente 10 caracteres alfanuméricos.
+                -->
+				<xs:pattern value="^[a-zA-Z0-9]{10}$" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

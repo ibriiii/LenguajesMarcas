@@ -1,0 +1,38 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 4 - Información de ubicaciones
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Tipo simple para dirección (original) -->
+	<xs:simpleType name="direccion">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="norte" />
+			<xs:enumeration value="sur" />
+			<xs:enumeration value="este" />
+			<xs:enumeration value="oeste" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Nuevo tipo complejo que extiende direccion -->
+	<xs:complexType name="infoUbicacion">
+		<xs:simpleContent>
+			<xs:extension base="direccion">
+				<xs:attribute name="metros" type="xs:positiveInteger" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<!-- Modificación del elemento ubicacion para usar el nuevo tipo -->
+	<xs:element name="ubicaciones">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ubicacion" type="infoUbicacion" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

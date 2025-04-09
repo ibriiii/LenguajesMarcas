@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio1-1 - Numeros
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE numeros [
+	<!ELEMENT numeros (numero*)>
+	<!ELEMENT numero (#PCDATA)>
+]>
+<!-- Contenedor de numeros -->
+<numeros>
+	<!-- Numero en cuestion -->
+	<numero>25</numero>
+</numeros>

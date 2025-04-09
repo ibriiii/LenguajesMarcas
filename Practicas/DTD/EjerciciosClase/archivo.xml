@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pelicula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="esquema.xsd">
+    <titulo>El secreto del bosque</titulo>
+    <director>Guillermo del Toro</director>
+    <anio>2006</anio>
+    <genero>Fantasía oscura</genero>
+</pelicula>
+
+<pelicula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="esquema.xsd">
+    <titulo>La leyenda del espectro</titulo>
+    <director>Tim Burton</director>
+    <anio>1999</anio>
+    <genero>Fantasía oscura</genero>
+</pelicula>
+
+<pelicula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="esquema.xsd">
+    <titulo>El viaje de Aryn</titulo>
+    <director>Wolfgang Petersen</director>
+    <anio>1984</anio>
+    <genero>Fantasía</genero>
+</pelicula>

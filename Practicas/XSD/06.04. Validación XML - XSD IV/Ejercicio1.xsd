@@ -1,0 +1,52 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 1 - Alumnos 1
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Tipo para el DNI: 8 dígitos + letra mayúscula -->
+	<xs:simpleType name="tipoDNI">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{8}[A-Z]" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Tipo para el número (0-500) -->
+	<xs:simpleType name="tipoNumero">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0" />
+			<xs:maxInclusive value="500" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Tipo para el teléfono (entero) -->
+	<xs:simpleType name="tipoTelefono">
+		<xs:restriction base="xs:integer" />
+	</xs:simpleType>
+
+	<!-- Estructura de la dirección -->
+	<xs:complexType name="tipoDireccion">
+		<xs:sequence>
+			<xs:element name="calle" type="xs:string" />
+			<xs:element name="numero" type="tipoNumero" />
+			<xs:element name="ciudad" type="xs:string" />
+			<xs:element name="provincia" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Estructura principal del alumno -->
+	<xs:element name="alumno">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string" />
+				<xs:element name="direccion" type="tipoDireccion" />
+				<xs:element name="telefono" type="tipoTelefono" minOccurs="0" maxOccurs="5" />
+			</xs:sequence>
+			<xs:attribute name="dni" type="tipoDNI" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

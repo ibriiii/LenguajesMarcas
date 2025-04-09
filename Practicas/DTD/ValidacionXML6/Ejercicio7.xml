@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 07/04/2025
+Ejercicio: 3-6 - Jugadores y equipos de futbol
+-->
+<!-- Declaración DTD -->
+<!DOCTYPE futbol [
+	<!ELEMENT futbol ((jugador|equipo)*)>
+	<!ELEMENT jugador EMPTY>
+	<!ATTLIST jugador nombre NMTOKENS #REQUIRED>
+	<!ATTLIST jugador codigo ID #REQUIRED>
+	<!ELEMENT equipo EMPTY>
+	<!ATTLIST equipo nombre CDATA #REQUIRED>
+	<!ATTLIST equipo jugadores IDREFS #IMPLIED>
+]>
+<!-- Contenedor de futbol -->
+<futbol>
+	<!-- Jugador individual con atributos descriptivos -->
+	<jugador nombre="Alfredo Di Stéfano" codigo="ads" />
+	<jugador nombre="Edson Arantes do Nascimento" codigo="ean" />
+	<jugador nombre="Diego Armando Maradona" codigo="dam" />
+	<jugador nombre="Johan Cruyff" codigo="jc" />
+	<!-- Equipo individual con atributos descriptivos -->
+	<equipo nombre="Société Sportiva Calcio Napoli" jugadores="Maradona" />
+	<equipo nombre="Futbol Club Barcelona" jugadores="Cruyff" />
+</futbol>

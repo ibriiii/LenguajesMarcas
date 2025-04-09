@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 07/04/2025
+Ejercicio: 4-4 - Resoluciones de pantalla
+-->
+<!-- Declaración DTD -->
+<!DOCTYPE resoluciones [
+	<!ELEMENT resoluciones (resolution+)>
+	<!ELEMENT resolution EMPTY>
+	<!ATTLIST resolution
+		nombre NMTOKEN #REQUIRED
+		alto CDATA #REQUIRED
+		ancho CDATA #REQUIRED>
+]>
+<!-- Contenedor de resoluciones -->
+<resoluciones>
+	<!-- Resolucion individual con atributos descriptivos -->
+	<resolution nombre="VGA" alto="480" ancho="640" />
+	<resolution nombre="XGA" alto="768" ancho="1024" />
+	<resolution nombre="HD1080" alto="1080" ancho="1920" />
+</resoluciones>

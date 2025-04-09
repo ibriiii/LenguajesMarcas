@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio1-9 El sistema solar 
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE sistemaSolar [
+	<!ELEMENT sistemaSolar (cuerpo*)>
+	<!ELEMENT cuerpo (planeta|satelite|asteroide)>
+	<!ELEMENT planeta (#PCDATA)>
+	<!ELEMENT satelite (#PCDATA)>
+	<!ELEMENT asteroide (#PCDATA)>
+]>
+<!-- Contenedor de cuerpos -->
+<sistemaSolar>
+	<!-- Cuerpo planetarion individual -->
+	<cuerpo>
+		<!-- Definicion del cuerpo (planeta, satelite, asteroide...) -->
+		<planeta>Tierra</planeta>
+	</cuerpo>
+	<cuerpo>
+		<satelite>Luna</satelite>
+	</cuerpo>
+	<cuerpo>
+		<asteroide>Ceres</asteroide>
+	</cuerpo>
+</sistemaSolar>

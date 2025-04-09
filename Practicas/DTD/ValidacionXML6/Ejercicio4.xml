@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 07/04/2025
+Ejercicio: 3-3 - Cuadros
+-->
+<!-- Declaración DTD -->
+<!DOCTYPE cuadros [
+	<!ELEMENT cuadros (cuadro*)>
+	<!ELEMENT cuadro EMPTY>
+	<!ATTLIST cuadro titulo ID #REQUIRED>
+	<!ATTLIST cuadro autor CDATA #REQUIRED>
+]>
+<!-- Contenedor de cuadros -->
+<cuadros>
+	<!-- Cuadro individual con atributos descriptivos -->
+	<cuadro titulo="AdanYEva" autor="Alberto Durero" />
+	<cuadro titulo="CondeLucanor" autor="Lucas Cranach, el viejo" />
+</cuadros>

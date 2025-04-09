@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 31/03/2025
+Ejercicio: Ejercicio 1
+-->
+<!-- Declaracion del DTD -->
 <!DOCTYPE factura [
-<!ELEMENT factura (datos-emisor, datos-cliente, detalle-factura)>
-<!ATTLIST factura
-	numero CDATA #REQUIRED
-	fecha CDATA #REQUIRED>
+	<!ELEMENT factura (datos-emisor, datos-cliente, detalle-factura)>
+	<!ATTLIST factura
+		numero CDATA #REQUIRED
+		fecha CDATA #REQUIRED>
 
 	<!ELEMENT datos-emisor (nombre, cif, telefono)>
 	<!ELEMENT datos-cliente (nombre, cif, telefono)>
@@ -12,30 +19,33 @@
 	<!ELEMENT telefono (#PCDATA)>
 
 	<!ELEMENT detalle-factura (linea+)>
-	<!ATTLIST detalle-factura
-	importe CDATA #REQUIRED>
+	<!ATTLIST detalle-factura importe CDATA #REQUIRED>
 
 	<!ELEMENT linea (descripcion, cantidad, pvp, oferta?)>
 	<!ATTLIST linea
-	codigo-articulo ID #REQUIRED
-	tipo (Libro|DVD|Varios) #REQUIRED>
+		codigo-articulo ID #REQUIRED
+		tipo (Libro|DVD|Varios) #REQUIRED>
 
 	<!ELEMENT descripcion (#PCDATA)>
 	<!ELEMENT cantidad (#PCDATA)>
 	<!ELEMENT pvp (#PCDATA)>
 	<!ELEMENT oferta EMPTY>
 ]>
+<!-- Contenedor de facturas -->
 <factura numero="F20230001" fecha="2023-11-15">
+	<!-- Datos del deudor -->
 	<datos-emisor>
 		<nombre>Librería Cervantes</nombre>
 		<cif>A12345678</cif>
 		<telefono>912345678</telefono>
 	</datos-emisor>
+	<!-- Datos del cliente -->
 	<datos-cliente>
 		<nombre>Biblioteca Municipal</nombre>
 		<cif>B87654321</cif>
 		<telefono>915432167</telefono>
 	</datos-cliente>
+	<!-- Detalle de la factura -->
 	<detalle-factura importe="127.50">
 		<linea codigo-articulo="ART001" tipo="Libro">
 			<descripcion>Don Quijote de la Mancha</descripcion>
@@ -46,7 +56,7 @@
 			<descripcion>Documental Historia del Arte</descripcion>
 			<cantidad>1</cantidad>
 			<pvp>15.50</pvp>
-			<oferta/>
+			<oferta />
 		</linea>
 		<linea codigo-articulo="ART003" tipo="Varios">
 			<descripcion>Estuches para libros</descripcion>

@@ -1,0 +1,43 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 3 - Validación de artículos y precios
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Definición del tipo para el atributo "moneda" -->
+	<xs:simpleType name="tipoMoneda">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Euro" />
+			<xs:enumeration value="Dólar" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Estructura principal -->
+	<xs:element name="articulos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="articulo" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="nombre" type="xs:string" />
+							<xs:element name="precio">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:decimal">
+											<xs:attribute name="moneda" type="tipoMoneda"
+												use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 6
+-->
+<!-- Definición del esquema XML -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Definición de un tipo simple reutilizable para las iniciales -->
+	<xs:simpleType name="tipoIniciales">
+		<xs:restriction base="xs:string">
+			<!-- Acepta exactamente 3 letras, mayúsculas o minúsculas -->
+			<xs:pattern value="[A-Za-z]{3}" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Elemento raíz "fichas" -->
+	<xs:element name="fichas">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- El elemento "ficha" puede repetirse -->
+				<xs:element name="ficha" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<!-- nombre de tipo cadena -->
+							<xs:element name="nombre" type="xs:string" />
+							<!-- iniciales que usan el tipo definido -->
+							<xs:element name="iniciales" type="tipoIniciales" />
+							<!-- edad como entero -->
+							<xs:element name="edad" type="xs:integer" />
+							<!-- iniciales-al-reves también usan el mismo tipo -->
+							<xs:element name="iniciales-al-reves" type="tipoIniciales" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

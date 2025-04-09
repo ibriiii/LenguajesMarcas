@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio1-7 - Musicos
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE musicos [
+	<!ELEMENT musicos (musico*)>
+	<!ELEMENT musico ((nombre | apodo), fechaNacimiento)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT apodo (#PCDATA)>
+	<!ELEMENT fechaNacimiento (#PCDATA)>
+]>
+<!-- Contenedor de musicos -->
+<musicos>
+	<!-- Musico individual -->
+	<musico>
+		<!-- Descripcion del musico -->
+		<nombre>Antonio Vivaldi</nombre>
+		<fechaNacimiento>4 de marzo de 1678</fechaNacimiento>
+	</musico>
+	<musico>
+		<apodo>El viejo peluca</apodo>
+		<fechaNacimiento>21 de marzo de 1685</fechaNacimiento>
+	</musico>
+</musicos>

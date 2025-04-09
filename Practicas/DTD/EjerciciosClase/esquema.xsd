@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schemaxmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:elementname="libro">
+<xs:complexType>
+	<xs:sequence>
+		<xs:elementname="titulo" type="xs:string"/>
+		<xs:elementname="director" type="xs:string"/>
+		<xs:elementname="anio" type="xs:integer"/>
+		<xs:elementname="genero" type="xs:string"/>
+	</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>

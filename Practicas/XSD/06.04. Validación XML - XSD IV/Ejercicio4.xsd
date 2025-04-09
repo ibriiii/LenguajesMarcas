@@ -1,0 +1,46 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 4 - Heladería 2
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Tipo para los sabores (elementos vacíos) -->
+	<xs:complexType name="tipoSabor">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:sequence />
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- Estructura del helado (combinaciones permitidas) -->
+	<xs:complexType name="tipoHelado">
+		<xs:sequence>
+			<xs:choice>
+				<!-- Opción 1: fresa + chocolate -->
+				<xs:sequence>
+					<xs:element name="fresa" type="tipoSabor" />
+					<xs:element name="chocolate" type="tipoSabor" />
+				</xs:sequence>
+				<!-- Opción 2: vainilla + chocolate -->
+				<xs:sequence>
+					<xs:element name="vainilla" type="tipoSabor" />
+					<xs:element name="chocolate" type="tipoSabor" />
+				</xs:sequence>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Elemento raíz -->
+	<xs:element name="heladeria">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="helado" type="tipoHelado" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

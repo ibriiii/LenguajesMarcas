@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE deportistas [
+    <!ELEMENT deportistas (futbol | f1 | futbol)*>
+    <!ELEMENT futbol (#PCDATA)>
+    <!ELEMENT f1 (#PCDATA)>    
+    <!ATTLIST f1 pais CDATA "Portugal">
+    <!ATTLIST f1 fecha_de_nacimiento CDATA #IMPLIED>
+    <!ATTLIST f1 equipo CDATA #REQUIRED>
+]>
+<deportistas>
+    <futbol>Manuel Neuer</futbol>
+    <futbol>Marco Reus</futbol>
+    <futbol>Cristiano Ronaldo</futbol>
+</deportistas>

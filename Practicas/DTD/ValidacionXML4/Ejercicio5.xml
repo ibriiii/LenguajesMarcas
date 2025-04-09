@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio1-5 - Animales
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE animales [
+	<!ELEMENT animales (animal*)>
+	<!ELEMENT animal (#PCDATA)>
+]>
+<!-- Contenedor de animales -->
+<animales>
+	<!-- Animal individual -->
+	<animal>Caniche</animal>
+	<animal>Siamés</animal>
+</animales>

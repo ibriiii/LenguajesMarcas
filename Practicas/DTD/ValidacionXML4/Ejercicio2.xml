@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio1-2 - Letras
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE letras [
+	<!ELEMENT letras (letra*)>
+	<!ELEMENT letra (#PCDATA)>
+]>
+<!-- Contenedor de letras -->
+<letras>
+	<!-- Letra singular -->
+	<letra>m</letra>
+	<letra>uve doble</letra>
+</letras>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 1
+-->
+<!-- Definición del esquema XML -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Definición del elemento raíz "fichas" -->
+	<xs:element name="fichas">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- El elemento "ficha" puede aparecer varias veces -->
+				<xs:element name="ficha" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<!-- "nombre" es un elemento de tipo cadena -->
+							<xs:element name="nombre" type="xs:string" />
+							<!-- "edad" es un elemento de tipo entero -->
+							<xs:element name="edad" type="xs:integer" />
+						</xs:sequence>
+						<!-- El atributo "numero" es obligatorio y de tipo entero -->
+						<xs:attribute name="numero" type="xs:integer" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio 2-8 - Contabilidad
+-->
+<!-- Declaración DTD -->
+<!DOCTYPE contabilidad [
+	<!ELEMENT contabilidad (apunte*)>
+	<!ELEMENT apunte ((ingreso|gasto), fecha, cantidad, concepto)>
+	<!ELEMENT ingreso EMPTY>
+	<!ELEMENT gasto EMPTY>
+	<!ELEMENT fecha (#PCDATA)>
+	<!ELEMENT cantidad (#PCDATA)>
+	<!ELEMENT concepto (#PCDATA)>
+]>
+<!-- Registros contables -->
+<contabilidad>
+	<!-- Apunte de ingreso -->
+	<apunte>
+		<!-- Descripcion del ingreso -->
+		<ingreso />
+		<fecha>24 de febrero de 2011</fecha>
+		<cantidad>1800,00 €</cantidad>
+		<concepto>Salario</concepto>
+	</apunte>
+	<apunte>
+		<gasto />
+		<fecha>28 de febrero de 2011</fecha>
+		<cantidad>74,25 €</cantidad>
+		<concepto>Recibo luz</concepto>
+	</apunte>
+</contabilidad>

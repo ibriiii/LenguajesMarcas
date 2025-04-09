@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio1-3 - Colores
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE colores [
+	<!ELEMENT colores (color*)>
+	<!ELEMENT color (#PCDATA)>
+]>
+<!-- Contenedor de colores -->
+<colores>
+	<!-- Color individual -->
+	<color>azul marino</color>
+	<color>negro</color>
+	<color>amarillo</color>
+</colores>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio 2-2 - Efemérides
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE efemerides [
+	<!ELEMENT efemerides (efemeride*)>
+	<!ELEMENT efemeride (fecha, hecho)>
+	<!ELEMENT fecha (#PCDATA)>
+	<!ELEMENT hecho (#PCDATA)>
+]>
+<!-- Contenedor de efemérides -->
+<efemerides>
+	<!-- Efeméride individual -->
+	<efemeride>
+		<!-- Fecha del evento -->
+		<fecha>20 de julio de 1969</fecha>
+		<!-- Descripción del hecho -->
+		<hecho>Llegada del hombre a la Luna</hecho>
+	</efemeride>
+	<efemeride>
+		<fecha>12 de octubre de 1492</fecha>
+		<hecho>Llegada de Colón a América</hecho>
+	</efemeride>
+	<efemeride>
+		<fecha>6 de abril de 1909</fecha>
+		<hecho>Llegada de Robert Peary al Polo Norte</hecho>
+	</efemeride>
+</efemerides>

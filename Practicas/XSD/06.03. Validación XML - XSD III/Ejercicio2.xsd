@@ -1,0 +1,37 @@
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 09/04/2025
+Ejercicio: Ejercicio 2 - Validación de claves (4-10 caracteres)
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Definición del tipo para la clave -->
+	<xs:simpleType name="tipoClave">
+		<xs:restriction base="xs:string">
+			<!-- Longitud entre 4 y 10 caracteres -->
+			<xs:minLength value="4" />
+			<xs:maxLength value="10" />
+			<!-- Solo letras (mayúsculas/minúsculas) y dígitos -->
+			<xs:pattern value="[a-zA-Z0-9]+" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Estructura principal del documento -->
+	<xs:element name="fichas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ficha" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="nombre" type="xs:string" />
+							<xs:element name="clave" type="tipoClave" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

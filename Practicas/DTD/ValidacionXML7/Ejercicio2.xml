@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 07/04/2025
+Ejercicio: 4-2 - Inventores
+-->
+<!-- Declaración DTD -->
+<!DOCTYPE inventores [
+	<!ELEMENT inventores (inventor*)>
+	<!ELEMENT inventor EMPTY>
+	<!ATTLIST inventor invento CDATA #REQUIRED>
+	<!ATTLIST inventor nombre CDATA #REQUIRED>
+]>
+<!-- Contenedor de inventores -->
+<inventores>
+	<!-- Inventor individual con atributos descriptivos -->
+	<inventor nombre="Robert_Adler" invento="Mando a distancia" />
+	<inventor nombre="Laszlo_Josef_Biro" invento="Boligrafo" />
+	<inventor nombre="Josephine_Garis_Cochran" invento="Lavaplatos" />
+	<inventor nombre="Desconocido" invento="Fuego" />
+</inventores>

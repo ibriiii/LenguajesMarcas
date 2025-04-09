@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 07/04/2025
+Ejercicio: 3-4 - Lista de la compra
+-->
+<!-- Declaración DTD -->
+<!DOCTYPE listaCompra [
+	<!ELEMENT listaCompra (item*)>
+	<!ELEMENT item EMPTY>
+	<!ATTLIST item nombre CDATA #REQUIRED>
+	<!ATTLIST item cantidad CDATA #REQUIRED>
+]>
+<!-- Contenedor de articulos -->
+<listaCompra>
+	<!-- Articulo individual con los atributos que lo describen -->
+	<item nombre="leche" cantidad="12 litros" />
+	<item nombre="pan" cantidad="3 barras de cuarto" />
+</listaCompra>

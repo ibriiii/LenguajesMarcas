@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Ibrahim
+Curso: DAW1
+Fecha: 04/03/2025
+Ejercicio: Ejercicio 2-5 - Reyes españoles
+-->
+<!-- Declaracion DTD -->
+<!DOCTYPE reyesEspanioles [
+	<!ELEMENT reyesEspanioles (rey*)>
+	<!ELEMENT rey (nombre, padre, madre)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT padre (#PCDATA)>
+	<!ELEMENT madre (#PCDATA)>
+]>
+<!-- Listado de reyes españoles -->
+<reyesEspanioles>
+	<!-- Rey individual -->
+	<rey>
+		<!-- Descripcion del rey -->
+		<nombre>Felipe III</nombre>
+		<padre>Felipe II</padre>
+		<madre>Ana de Austria</madre>
+	</rey>
+	<rey>
+		<nombre>Carlos I</nombre>
+		<padre>Felipe el Hermoso</padre>
+		<madre>Juana la Loca</madre>
+	</rey>
+</reyesEspanioles>
